@@ -1,12 +1,27 @@
-import * as helmet from 'helmet-detection';
- 
-const img = document.getElementById('img');
- 
+
+import React, { useState } from 'react'
+import * as helmet from 'helmetdetection';
+
+const Safety = () => {
+    const [file, setFile] = useState(null);
+    function showFile(e){
+        setFile(e.target.files[0]);
+    }
+    
 // Load the model.
-const model = await helmet.load(PATH_TO_JSON_MODEL);
+    const model = helmet.load("C:/safetyhelmet/annotations/hard_hat_workers0.json");
  
 // Classify the image.
-const predictions = await model.detect(img);
+    const predictions = model.detect(file);
  
-console.log('Predictions: ');
-console.log(predictions);
+    console.log('Predictions: ');
+    console.log(predictions);
+
+  return (
+    <div>
+      <input type="file" onChange={showFile} />
+    </div>
+  )
+}
+
+export default Safety

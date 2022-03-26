@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.6.10",
     "framer-motion": "^6.2.8",
+    "fs": "^0.0.1-security",
     "google-map-react": "^2.1.10",
     "helmetdetection": "^1.2.2",
     "prop-types": "^15.8.1",
@@ -23,6 +24,7 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.0",
     "react-webcam": "^7.0.0",
+    "react-xml-parser": "^1.1.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
