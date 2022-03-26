@@ -5,7 +5,7 @@ const Form = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login, currentUser } = useAuth();
+  const { login, currentUser, register } = useAuth();
   const [isSubmiting, setIsSubmiting] = useState(false);
 
   function changeName(e) {
@@ -18,13 +18,10 @@ const Form = (props) => {
     setPassword(e.target.value);
   }
 
-  function registerUser() {}
-  const loginUser = async (e) => {
-    e.preventDefault();
-    // your login logic here
+  const onSignup = async () => {
     try {
-      login(email, password);
-      console.log(currentUser);
+      e.preventDefault();
+      register(email, password);
     } catch (error) {
       console.log(error);
     }
@@ -55,14 +52,36 @@ const Form = (props) => {
               onChange={changePassword}
             />
           </div>
-          <button type="button " className="btn btn-dark mb-3 px-3">
+          <button
+            type="button "
+            className="btn btn-dark mb-3 px-3"
+            onClick={async (e) => {
+              e.preventDefault();
+              // your login logic here
+              if (!email || !password) {
+                console.log("Please enter email and password");
+              }
+              setIsSubmiting(true);
+              login(email, password);
+              console.log(currentUser);
+            }}
+          >
             Login as Manager
           </button>
           <br />
           <button
             type="button "
             className="btn btn-dark mb-3 px-4"
-            onSubmit={loginUser}
+            onClick={async (e) => {
+              e.preventDefault();
+              // your login logic here
+              if (!email || !password) {
+                console.log("Please enter email and password");
+              }
+              setIsSubmiting(true);
+              login(email, password);
+              console.log(currentUser);
+            }}
           >
             Login as Worker
           </button>
@@ -75,13 +94,12 @@ const Form = (props) => {
         <form>
           <div className="m-4">
             <input
-              type="email"
+              type="text"
               className="form-control"
-              id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter your Fullname"
-              //   value={name}
-              //   onChange={changeName}
+              value={name}
+              onChange={changeName}
             />
           </div>
           <div className="m-4">
@@ -90,8 +108,8 @@ const Form = (props) => {
               className="form-control"
               aria-describedby="emailHelp"
               placeholder="Enter your Email"
-              //   value={email}
-              //   onChange={changeEmail}
+              value={email}
+              onChange={changeEmail}
             />
           </div>
           <div className="m-4">
@@ -99,14 +117,14 @@ const Form = (props) => {
               type="password"
               className="form-control"
               placeholder="Enter your Password"
-              //   onChange={changePassword}
-              //   valyue={password}
+              onChange={changePassword}
+              valyue={password}
             />
           </div>
           <button
             type="button "
             className="btn btn-dark mb-3 px-3"
-            // onClick={registerUser}
+            onClick={onSignup}
           >
             Sign Up
           </button>
