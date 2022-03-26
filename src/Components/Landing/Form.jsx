@@ -37,21 +37,13 @@ const Form = (props) => {
         user_id: authUser.user.uid,
         name: name,
         email: authUser.user.email,
+        projects: [],
       });
     } catch (error) {
       console.log(error);
     }
   };
-
-// function onlogin(category){
-//     if(category.toLowerCase()=='c'){
-//     }
-//     else{
-
-//     }
-
-// }
-  if (props.state === false) {
+  if (props.state === true) {
     return (
       <div>
         <form>
