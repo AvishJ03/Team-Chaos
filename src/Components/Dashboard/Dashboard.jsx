@@ -5,10 +5,17 @@ import Welcome from './Welcome'
 
 const Dashboard = () => {
   return (
-    <>
-    <Navbar />
-    <Welcome />
-    </>
+    <div className="row">
+      {/* <div className="col-6"> */}
+        <Navbar />
+      {/* </div> */}
+      {/* <div className="col-3"> */}
+      <Welcome />
+      {/* </div> */}
+      {/* <div className="col-3"> */}
+      <StatsCard />
+      {/* </div> */}
+    </div>
     )
 }
 

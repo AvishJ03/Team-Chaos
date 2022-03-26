@@ -4,7 +4,7 @@ import '../../styles/landing.css'
 
 const Landing = () => {
   return (
-    <div className='background-img'>
+    <div className='backgroundB'>
       <Login />
     </div>
   )
