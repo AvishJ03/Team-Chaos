@@ -51,10 +51,12 @@ const Welcome = () => {
         <h3 className="px-5" style={{ color: "#fff", fontSize: "40px" }}>
           {name}
         </h3>
+        <div className="container" style={{marginLeft:"-30px", marginTop: "-30px"}}>
         <StatsCard />
         <StatsCard1 />
         <StatsCard2 />
         <StatsCard3 />
+        </div>
       </div>
     </>
   );
