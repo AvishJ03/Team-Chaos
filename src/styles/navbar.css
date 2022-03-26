@@ -4,6 +4,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #D2D2D2;
+    overflow: hidden;
 }
 
 p {
@@ -29,7 +30,7 @@ a, a:hover, a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #303c6c;
+    background: white;
 }
 
 #sidebar ul.components {

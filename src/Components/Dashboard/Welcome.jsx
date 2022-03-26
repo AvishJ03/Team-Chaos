@@ -1,9 +1,9 @@
 import React from 'react'
-
+import "../../styles/welcome.css"
 const Welcome = () => {
   return (
-    <div>
-        <img src="assets/card-1.png" style={{margin:"0 0 0 -200px",}}></img>
+    <div className  = "background-img mt-3">
+        
     </div>
   )
 }
