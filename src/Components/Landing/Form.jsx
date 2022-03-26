@@ -1,6 +1,9 @@
+import { collection, addDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { db, auth } from "../../utils/init-firebase";
 import { useAuth } from "../../contexts/AuthContext";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const Form = (props) => {
   const [name, setName] = useState("");
@@ -9,6 +12,7 @@ const Form = (props) => {
   const { login, currentUser, register } = useAuth();
   const [isSubmiting, setIsSubmiting] = useState(false);
   const navigate = useNavigate();
+  const workerCollectionRef = collection(db, "workers");
 
   function changeName(e) {
     setName(e.target.value);
@@ -23,7 +27,17 @@ const Form = (props) => {
   const onSignup = async (e) => {
     try {
       e.preventDefault();
-      register(email, password);
+      const authUser = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(authUser);
+      await addDoc(workerCollectionRef, {
+        user_id: authUser.user.uid,
+        name: name,
+        email: authUser.user.email,
+      });
     } catch (error) {
       console.log(error);
     }
