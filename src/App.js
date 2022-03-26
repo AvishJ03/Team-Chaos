@@ -1,9 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
-import Dashboard from "../src/Components/Dashboard/Dashboard"
-import BaseWorker from "../src/Components/Workers/BaseWorker"
-import Projects from "./Components/Projects/Projects";
+import Dashboard from "../src/Components/Dashboard/Dashboard";
+import BaseWorker from "../src/Components/Workers/BaseWorker";
 import Cam from "./Components/Safety/Cam";
+import MapChart from "./Components/Projects/MapChart";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/worker" element={<BaseWorker />} />
-        <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/projects" element={<MapChart />} /> */}
         <Route path="/safety" element={<Cam />} />
       </Routes>
     </BrowserRouter>
