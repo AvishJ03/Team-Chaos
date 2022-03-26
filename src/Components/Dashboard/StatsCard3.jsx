@@ -2,10 +2,6 @@ import React from 'react'
 import Row from '../Workers/Row'
 
 const StatsCard3 = (props) => {
-<<<<<<< HEAD
-  let data01=10
-  let data02 = 20
-=======
   let workers =[
     {
       workerID : 1, 
@@ -60,15 +56,12 @@ const StatsCard3 = (props) => {
       />
     )
   }
->>>>>>> 8b42b7ed3bb71fc8e28d3dc5062f3842472d1df6
   return (
     <div>
         <div className="card col-md-4" style={{margin : "250px 0px 0 600px", borderRadius:"15px", position:"absolute"}}>
-            <div className="card-body"  style={{overflow:"scroll", height:"270px"}}>
+            <div className="card-body"  style={{overflow:"auto", height:"270px"}}>
                 <h1 className="card-title" style={{fontSize:"30px", color: "#3A477C" }}>Projects</h1>
                 <p className="card-text" style={{color:"black"}}>
-<<<<<<< HEAD
-=======
                 <table className="table">
                   <thead>
                     <tr className = "mx-3" style={{height:"12px"}}>
@@ -82,7 +75,6 @@ const StatsCard3 = (props) => {
                     {workers.map((createRow))}
                   </tbody>
                 </table>
->>>>>>> 8b42b7ed3bb71fc8e28d3dc5062f3842472d1df6
                 </p>
             </div>
         </div>
