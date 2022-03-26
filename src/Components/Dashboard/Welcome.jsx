@@ -37,7 +37,7 @@ const Welcome = () => {
       }
     };
     getUser();
-  }, []);
+  }, [name, currentUser, uid]);
 
   return (
     <>
