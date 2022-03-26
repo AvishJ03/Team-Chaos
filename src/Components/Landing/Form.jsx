@@ -18,7 +18,7 @@ const Form = (props) => {
     setPassword(e.target.value);
   }
 
-  const onSignup = async () => {
+  const onSignup = async (e) => {
     try {
       e.preventDefault();
       register(email, password);
