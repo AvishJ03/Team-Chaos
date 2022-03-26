@@ -4,7 +4,7 @@
     overflow:hidden ;
 }
 
-.background-img{
+.backgroundB{
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("../../public/assets/Frame-One.png");
     background-size: cover;
     background-repeat: no-repeat;
