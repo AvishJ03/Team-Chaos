@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  sendPasswordResetEmail,
 } from "@firebase/auth";
 
 const AuthContext = createContext({
@@ -33,11 +34,19 @@ export default function AuthContextProvider({ children }) {
   }
 
   function login(email, password) {
-    return signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(auth, email, password).then((UserCredentials)=>{
+      var user = UserCredentials.user;
+    });
   }
 
   function logout() {
     return signOut(auth);
+  }
+
+  function forgotPassword(){
+    return sendPasswordResetEmail(email).then(()=>{
+      alert(`Reset Link has been sent to ${email}`);
+    });
   }
 
   const value = {
@@ -45,6 +54,7 @@ export default function AuthContextProvider({ children }) {
     register,
     login,
     logout,
+    forgotPassword,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
