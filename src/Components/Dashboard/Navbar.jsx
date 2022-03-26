@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import "../../styles/navbar.css"
 
 const Navbar = () => {
@@ -12,13 +13,13 @@ const Navbar = () => {
                     </div>
                     <ul className="list-unstyled components" style={{marginTop:"-20px"}}>
                         <li>
-                        <a href="#"><span class="icon"><ion-icon name="grid-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Dashboard</a>
+                        <Link to="/dashboard"><span class="icon"><ion-icon name="grid-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Dashboard</Link>
                         </li>
                         <li>
-                            <a href="#"><span class="icon"><ion-icon name="build-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Projects</a>
+                            <Link to="/worker"><span class="icon"><ion-icon name="build-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Projects</Link>
                         </li>
                         <li>
-                            <a href="#"><span class="icon"><ion-icon name="people-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Workers</a>
+                            <Link to="/worker"><span class="icon"><ion-icon name="people-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Workers</Link>
                         </li>
                         <li>
                             <a href="#"><span class="icon"><ion-icon name="clipboard-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;Attendance</a>
