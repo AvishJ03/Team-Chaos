@@ -12,7 +12,7 @@ const Form = (props) => {
   const { login, currentUser, register } = useAuth();
   const [isSubmiting, setIsSubmiting] = useState(false);
   const navigate = useNavigate();
-  const workerCollectionRef = collection(db, "workers");
+  const contractorCollectionRef = collection(db, "Contractor");
 
   function changeName(e) {
     setName(e.target.value);
@@ -33,7 +33,7 @@ const Form = (props) => {
         password
       );
       console.log(authUser);
-      await addDoc(workerCollectionRef, {
+      await addDoc(contractorCollectionRef, {
         user_id: authUser.user.uid,
         name: name,
         email: authUser.user.email,
@@ -43,6 +43,14 @@ const Form = (props) => {
     }
   };
 
+// function onlogin(category){
+//     if(category.toLowerCase()=='c'){
+//     }
+//     else{
+
+//     }
+
+// }
   if (props.state === false) {
     return (
       <div>
