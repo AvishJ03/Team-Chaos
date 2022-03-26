@@ -19,7 +19,7 @@ const Projects = () => {
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyBLdrEAIVSAI-DMcjrsK8d1tWyqgUb5rt0",
-    libraries,
+    libraries: libraries,
   });
 
   if (loadError) {

@@ -45,7 +45,7 @@ const StatsCard = () => {
         }}
       >
         <div className="card-body">
-          <h1 className="card-title" style={{ fontSize: "30px" }}>
+          <h1 className="card-title" style={{ fontSize: "30px", color: "#3A477C" }}>
             Total Projects
           </h1>
           <p className="card-text" style={{ color: "black" }}>
