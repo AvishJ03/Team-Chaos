@@ -2,7 +2,9 @@ import React from 'react'
 
 const AddWorker = () => {
   return (
-    <div style={{backgroundColor:"red"}}>AddWorker</div>
+    <div className='container'>
+
+    </div>
   )
 }
 
