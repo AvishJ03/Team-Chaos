@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 
 const Form = (props) => {
@@ -7,6 +8,7 @@ const Form = (props) => {
   const [password, setPassword] = useState("");
   const { login, currentUser, register } = useAuth();
   const [isSubmiting, setIsSubmiting] = useState(false);
+  const navigate = useNavigate();
 
   function changeName(e) {
     setName(e.target.value);
@@ -63,6 +65,7 @@ const Form = (props) => {
               }
               setIsSubmiting(true);
               login(email, password);
+              navigate("/dashboard");
               console.log(currentUser);
             }}
           >
@@ -80,6 +83,7 @@ const Form = (props) => {
               }
               setIsSubmiting(true);
               login(email, password);
+              navigate("/dashboard");
               console.log(currentUser);
             }}
           >
