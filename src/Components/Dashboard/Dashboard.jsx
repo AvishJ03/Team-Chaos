@@ -13,7 +13,6 @@ const Dashboard = () => {
       <Welcome />
       {/* </div> */}
       {/* <div className="col-3"> */}
-      <StatsCard />
       {/* </div> */}
     </div>
     )
