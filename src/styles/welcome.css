@@ -5,3 +5,7 @@
     margin: 0 0 0 330px;
     height: 100vh;
 }
+
+*{
+    /* overflow: auto; */
+}
