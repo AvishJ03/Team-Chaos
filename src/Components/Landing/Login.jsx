@@ -16,6 +16,7 @@ const Login = () => {
                 <h6 className="card-subtitle mb-2 text-muted">{register && "Please enter your email and password"}{register || "Please enter your Details"}</h6>
                 <Form state={register}/>
                 <div class="m-2">
+                {register && <p> <span className = "hover-effect" style = {{textDecoration:"underline", cursor: "pointer"}} >Forgot Password?</span> </p>}
                 {register && <p>New Here? <span className = "hover-effect" style = {{textDecoration:"underline", cursor: "pointer"}} onClick={changeRegister}>Register</span> </p>}
                 {register || <p>Already Signed Up? <span className = "hover-effect" style = {{textDecoration:"underline", cursor: "pointer"}} onClick={changeRegister}>Login</span> </p>}
                 </div>
