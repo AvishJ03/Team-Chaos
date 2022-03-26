@@ -13,6 +13,7 @@ const AuthContext = createContext({
   register: () => Promise,
   login: () => Promise,
   logout: () => Promise,
+  forgotPassword: () => Promise,
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -34,17 +35,19 @@ export default function AuthContextProvider({ children }) {
   }
 
   function login(email, password) {
-    return signInWithEmailAndPassword(auth, email, password).then((UserCredentials)=>{
-      var user = UserCredentials.user;
-    });
+    return signInWithEmailAndPassword(auth, email, password).then(
+      (UserCredentials) => {
+        var user = UserCredentials.user;
+      }
+    );
   }
 
   function logout() {
     return signOut(auth);
   }
 
-  function forgotPassword(){
-    return sendPasswordResetEmail(email).then(()=>{
+  function forgotPassword(email) {
+    return sendPasswordResetEmail(email).then(() => {
       alert(`Reset Link has been sent to ${email}`);
     });
   }
