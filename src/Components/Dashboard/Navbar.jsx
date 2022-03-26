@@ -10,7 +10,6 @@ const Navbar = () => {
       className="row"
       style={{
         height: "100vh",
-        textAlign: "center",
         position: "absolute",
         marginTop: "-19px",
       }}
@@ -62,7 +61,7 @@ const Navbar = () => {
                   &nbsp;&nbsp;&nbsp;Attendance
                 </a>
               </li>
-              <li>
+              
                 <Link to="/">
                   <span class="icon">
                     <button
@@ -72,13 +71,13 @@ const Navbar = () => {
                         logout();
                         console.log("logout")
                       }}
-                      style={{ borderRadius: "20px" }}
+                      style={{ borderRadius: "20px", marginTop: "295px", background: "#3A477C", color:"white"}}
                     >
                       Logout
                     </button>
                   </span>
                 </Link>
-              </li>
+              
             </ul>
           </nav>
         </div>

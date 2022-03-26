@@ -142,7 +142,7 @@ const Form = (props) => {
               className="form-control"
               placeholder="Enter your Password"
               onChange={changePassword}
-              valyue={password}
+              value={password}
               style={{borderRadius:"20px", height:"50px"}}
             />
           </div>
