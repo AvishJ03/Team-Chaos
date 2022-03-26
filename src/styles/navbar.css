@@ -26,10 +26,10 @@ a, a:hover, a:focus {
     background: #fff;
     color: #303C6C;
     transition: all 0.3s;
+    padding:20px;
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
     background: white;
 }
 
@@ -43,9 +43,11 @@ a, a:hover, a:focus {
 }
 
 #sidebar ul li a {
-    padding: 10px;
+    padding: 15px;
     font-size: 1.1em;
     display: block;
+    border-radius: 20px;
+    width: 200px;
 }
 #sidebar ul li a:hover{
     color: white;

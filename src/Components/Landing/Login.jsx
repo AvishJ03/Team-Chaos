@@ -10,7 +10,7 @@ const Login = () => {
     }
   return (
     <div>
-        <div className="card px-3 rounded-me" style={{width: "25rem", margin:"150px 900px", textAlign:"center"}}>
+        <div className="card px-3 rounded-me" style={{width: "25rem",height:"30rem", margin:"150px 900px", textAlign:"center"}}>
             <div className="card-body ">
                 <h5 className="card-title pt-4" style={{fontSize:"30px"}}>{register && "Welcome Back..."}{register || "Hey There.."}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">{register && "Please enter your email and password"}{register || "Please enter your Details"}</h6>
