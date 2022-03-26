@@ -122,6 +122,7 @@ const Form = (props) => {
               placeholder="Enter your Fullname"
               value={name}
               onChange={changeName}
+              style={{borderRadius:"20px", height:"50px"}}
             />
           </div>
           <div className="m-4">
@@ -132,6 +133,7 @@ const Form = (props) => {
               placeholder="Enter your Email"
               value={email}
               onChange={changeEmail}
+              style={{borderRadius:"20px", height:"50px"}}
             />
           </div>
           <div className="m-4">
@@ -140,13 +142,15 @@ const Form = (props) => {
               className="form-control"
               placeholder="Enter your Password"
               onChange={changePassword}
-              valyue={password}
+              value={password}
+              style={{borderRadius:"20px", height:"50px"}}
             />
           </div>
           <button
             type="button "
             className="btn btn-dark mb-3 px-3"
             onClick={onSignup}
+            style={{borderRadius:"20px", height:"50px", background: "#3A477C", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}}
           >
             Sign Up
           </button>

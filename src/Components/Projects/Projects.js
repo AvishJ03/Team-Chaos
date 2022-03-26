@@ -1,25 +1,41 @@
 import React from "react";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import {
+  GoogleMap,
+  useLoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 
 const Projects = () => {
-  const render = (status = Status) => {
-    return <h1>{status}</h1>;
+  const libraries = ["places"];
+  const mapContainerStyle = {
+    width: "100vw",
+    height: "100vh",
   };
-  function Map() {
-    const ref = React.useRef(null);
-    const [map, setMap] = React.useState();
+  const center = {
+    lat: 19.1085,
+    lng: 72.827,
+  };
 
-    React.useEffect(() => {
-      if (ref.current && !map) {
-        setMap(new window.google.maps.Map(ref.current, {}));
-      }
-    }, [ref, map]);
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyBLdrEAIVSAI-DMcjrsK8d1tWyqgUb5rt0",
+    libraries: libraries,
+  });
+
+  if (loadError) {
+    return "Error";
   }
+  if (!isLoaded) {
+    return "Loading";
+  }
+
   return (
     <div>
-      <Wrapper apiKey={"YOUR_API_KEY"} render={render}>
-        {/* <YourComponent /> */}
-      </Wrapper>
+      <GoogleMap
+        center={center}
+        zoom={10}
+        mapContainerStyle={mapContainerStyle}
+      ></GoogleMap>
     </div>
   );
 };
