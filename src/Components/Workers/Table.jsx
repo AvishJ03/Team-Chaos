@@ -59,7 +59,7 @@ const Table = () => {
   }
 
   return (
-  <div className='px-3 container' style={{backgroundColor:"white", marginLeft:"300px", width:"1200px", marginTop:"20px"}}>
+  <div className='px-3 container' style={{backgroundColor:"white", marginLeft:"300px", width:"1200px", marginTop:"20px", borderRadius:"20px"}}>
     <table className="table">
       <thead>
         <tr className = "mx-3" style={{height:"12px"}}>
