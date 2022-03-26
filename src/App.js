@@ -3,7 +3,7 @@ import Landing from "./Components/Landing/Landing";
 import Dashboard from "../src/Components/Dashboard/Dashboard"
 import BaseWorker from "../src/Components/Workers/BaseWorker"
 import Projects from "./Components/Projects/Projects";
-import Webcam from "./Components/Safety/Webcam";
+import Cam from "./Components/Safety/Cam";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/worker" element={<BaseWorker />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/safety" element={<Webcam />} />
+        <Route path="/safety" element={<Cam />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import React from "react";
+import Webcam from "react-webcam"
 
-const Webcam = () => {
+const Cam = () => {
   const webcamRef = React.useRef(null);
   const mediaRecorderRef = React.useRef(null);
   const [capturing, setCapturing] = React.useState(false);
@@ -30,6 +31,7 @@ const Webcam = () => {
   const handleStopCaptureClick = React.useCallback(() => {
     mediaRecorderRef.current.stop();
     setCapturing(false);
+    console.log(capturing);
   }, [mediaRecorderRef, webcamRef, setCapturing]);
 
   const handleDownload = React.useCallback(() => {
@@ -64,4 +66,4 @@ const Webcam = () => {
   );
 };
 
-export default Webcam;
+export default Cam;
