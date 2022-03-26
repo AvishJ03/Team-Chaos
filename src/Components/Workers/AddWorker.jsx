@@ -7,20 +7,20 @@ const AddWorker = () => {
         <div>
             <form >
               <div className='row' >
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Full Name' style={{borderRadius:"20px", width:"500px"}}/></div>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Age' style={{borderRadius:"20px", width:"500px"}}/></div>
+                <div className='col-6 p-2 pt-4 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Full Name' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
+                <div className='col-6 p-2 pt-4 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Age' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
               </div>
               <div className='row'>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Aadhar Number' style={{borderRadius:"20px", width:"500px"}}/></div>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Work Location' style={{borderRadius:"20px", width:"500px"}}/></div>
+                <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Aadhar Number' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
+                <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Work Location' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
               </div>
               <div className='row'>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><input type="email" className="form-control mx-4" placeholder='Email' style={{borderRadius:"20px", width:"500px"}}/></div>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Address' style={{borderRadius:"20px", width:"500px"}}/></div>
+                <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><input type="email" className="form-control mx-4" placeholder='Email' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
+                <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Address' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
               </div>
               <div className='row'>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", marginLeft:"350px"}}>Upload Photo</button></div>
-                <div className='col-6 p-3 my-3' style={{zIndex:"2"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", marginLeft:"30px"}}>Upload Aadhar Card</button></div>
+                <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", marginLeft:"350px"}}>Upload Photo</button></div>
+                <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", marginLeft:"30px"}}>Upload Aadhar Card</button></div>
               </div>
             </form>
         </div>
