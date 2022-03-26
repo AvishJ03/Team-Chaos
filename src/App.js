@@ -2,7 +2,6 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
 import Dashboard from "../src/Components/Dashboard/Dashboard"
 import BaseWorker from "../src/Components/Workers/BaseWorker"
-import Dashboard from "../src/Components/Dashboard/Dashboard";
 import Projects from "./Components/Projects/Projects";
 import Webcam from "./Components/Safety/Webcam";
 
