@@ -3,6 +3,7 @@ import Landing from "./Components/Landing/Landing";
 import Dashboard from "../src/Components/Dashboard/Dashboard";
 import BaseWorker from "../src/Components/Workers/BaseWorker";
 import Cam from "./Components/Safety/Cam";
+import SimpleMap from "./Components/Map/SimpleMap";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/worker" element={<BaseWorker />} />
         <Route path="/safety" element={<Cam />} />
+        <Route path="/gmap" element={<SimpleMap />} />
       </Routes>
     </BrowserRouter>
   );
