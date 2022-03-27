@@ -35,10 +35,7 @@
     "react-xml-parser": "^1.1.8",
     "recharts": "^2.1.9",
     "styled-components": "^5.3.5",
-<<<<<<< HEAD
     "tailwindcss": "^3.0.23",
-=======
->>>>>>> 4912bbe86d49e87cc5492bca2912ce88caaeb599
     "web-vitals": "^2.1.4"
   },
   "scripts": {
