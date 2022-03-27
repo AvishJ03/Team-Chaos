@@ -4,7 +4,7 @@ import { db } from "../../utils/init-firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const AddWorker = () => {
+const AddWorker = ({ setDisplay }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState(null);
   const [number, setNumber] = useState(null);
@@ -25,7 +25,7 @@ const AddWorker = () => {
         address: address,
         attendance: parseInt(0),
       });
-      navigate("/dashboard");
+      setDisplay(0);
     } catch (error) {
       console.log(error);
     }
@@ -148,30 +148,40 @@ const AddWorker = () => {
               </div>
             </div>
             <div className="row">
-              <div className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"25px"}}>
+              <div
+                className="col-4 p-2 my-2"
+                style={{ zIndex: "2", marginLeft: "25px" }}
+              >
                 <button
                   type="button"
-                  className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"25px"}}
+                  className="col-4 p-2 my-2"
+                  style={{ zIndex: "2", marginLeft: "25px" }}
                 >
                   Upload Photo
                 </button>
               </div>
               <div
-                className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"-90px"}}
+                className="col-4 p-2 my-2"
+                style={{ zIndex: "2", marginLeft: "-90px" }}
               >
                 <button
                   type="button"
-                  class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C"}}
+                  class="btn btn-dark btn-lg px-4"
+                  style={{ borderRadius: "20px", background: "#3A477C" }}
                 >
                   Upload Aadhar
                 </button>
               </div>
-              <div
-                className='col-4 p-2 my-2' style={{zIndex:"2"}}
-              >
+              <div className="col-4 p-2 my-2" style={{ zIndex: "2" }}>
                 <button
                   type="button"
-                  class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#5A72D3", marginLeft:"270px", border:"none"}}
+                  class="btn btn-dark btn-lg px-4"
+                  style={{
+                    borderRadius: "20px",
+                    background: "#5A72D3",
+                    marginLeft: "270px",
+                    border: "none",
+                  }}
                   onClick={addWorker}
                 >
                   Submit
