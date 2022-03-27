@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WorkerNavBar = (props) => {
+const ProjectNavBar = (props) => {
   return (
     <nav className='navbar navbar-light pt-5' style={{marginLeft:"240px", marginTop:"35px"}}>
         <div className='container-fluid' style={{margin:"0px", display:"inline"}}>
@@ -11,4 +11,4 @@ const WorkerNavBar = (props) => {
   )
 }
 
-export default WorkerNavBar
+export default ProjectNavBar
