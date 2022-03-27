@@ -6,7 +6,7 @@ const StatsCard2 = (props) => {
             <div className="card-body">
                 <h1 className="card-title" style={{fontSize:"30px"}}>Attendance Reports</h1>
                 <p className="card-text" style={{color:"black"}}>
-                    {MyChart}
+                    
                 </p>
             </div>
         </div>
