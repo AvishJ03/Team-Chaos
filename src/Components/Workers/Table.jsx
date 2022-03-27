@@ -63,11 +63,11 @@ const Table = () => {
     <table className="table" >
       <thead>
         <tr style={{height:"12px"}}>
-          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"70px"}}>Worker ID</th>
-          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"23px"}}>Name</th>
-          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"18px"}}>Project ID</th>
-          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"50px"}}>Attendance</th>
-          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"55px"}}>Delete</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Worker ID</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Name</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Project ID</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Attendance</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Delete</th>
         </tr>
       </thead>
       <tbody> 
