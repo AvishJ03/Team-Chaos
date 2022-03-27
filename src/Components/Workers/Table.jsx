@@ -41,39 +41,26 @@ const Table = () => {
       />
     );
   };
+  
 
   return (
-    <div
-      className="px-3 container"
-      style={{
-        backgroundColor: "white",
-        marginLeft: "300px",
-        width: "1200px",
-        marginTop: "15px",
-        borderRadius: "20px",
-      }}
-    >
-      <table className="table">
-        <thead>
-          <tr className="mx-3" style={{ height: "12px" }}>
-            <th className="py-3" scope="col" style={{ color: "#A3A2A2" }}>
-              Worker ID
-            </th>
-            <th className="py-3" scope="col" style={{ color: "#A3A2A2" }}>
-              Name
-            </th>
-            <th className="py-3" scope="col" style={{ color: "#A3A2A2" }}>
-              Project ID
-            </th>
-            <th className="py-3" scope="col" style={{ color: "#A3A2A2" }}>
-              Attendance
-            </th>
-          </tr>
-        </thead>
-        <tbody>{workers.map(createRow)}</tbody>
-      </table>
-    </div>
-  );
-};
+  <div className='px-3 container' style={{backgroundColor:"white", marginLeft:"300px", width:"1200px", marginTop:"15px", borderRadius:"20px", zIndex:"2"}}>
+    <table className="table" >
+      <thead>
+        <tr style={{height:"12px"}}>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Worker ID</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Name</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Project ID</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Attendance</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"20px",paddingRight:"20px", textAlign:"center"}}>Delete</th>
+        </tr>
+      </thead>
+      <tbody> 
+        {workers.map((createRow))}
+      </tbody>
+    </table>
+  </div>
+  )
+}
 
 export default Table;

@@ -148,39 +148,30 @@ const AddWorker = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col-4 p-2 my2" style={{ zIndex: "2" }}>
+              <div className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"25px"}}>
                 <button
                   type="button"
-                  class="btn btn-dark btn-lg px-4"
-                  style={{
-                    borderRadius: "20px",
-                    marginLeft: "25px",
-                    background: "#3A477C",
-                  }}
+                  className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"25px"}}
                 >
                   Upload Photo
                 </button>
               </div>
               <div
-                className="col-4 p-2 my-2"
-                style={{ zIndex: "2", marginLeft: "-70px" }}
+                className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"-90px"}}
               >
                 <button
                   type="button"
-                  class="btn btn-dark btn-lg px-4"
-                  style={{ borderRadius: "20px", background: "#3A477C" }}
+                  class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C"}}
                 >
                   Upload Aadhar
                 </button>
               </div>
               <div
-                className="col-4 p-2 my-2"
-                style={{ zIndex: "2", marginLeft: "-100px" }}
+                className='col-4 p-2 my-2' style={{zIndex:"2"}}
               >
                 <button
                   type="button"
-                  class="btn btn-dark btn-lg px-4"
-                  style={{ borderRadius: "20px", background: "#3A477C" }}
+                  class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#5A72D3", marginLeft:"270px", border:"none"}}
                   onClick={addWorker}
                 >
                   Submit
