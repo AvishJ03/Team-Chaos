@@ -59,7 +59,7 @@ const TableAttendance = () => {
   }
 
   return (
-  <div className='px-3 container' style={{backgroundColor:"white", marginLeft:"300px", width:"1200px", marginTop:"15px", borderRadius:"20px", zIndex:"2"}}>
+  <div className='px-3 container' style={{backgroundColor:"white", marginLeft:"300px", width:"1200px", marginTop:"30px", borderRadius:"20px", zIndex:"2"}}>
     <table className="table" >
       <thead>
         <tr style={{height:"12px"}}>

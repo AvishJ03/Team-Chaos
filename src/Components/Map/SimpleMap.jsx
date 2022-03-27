@@ -13,13 +13,13 @@ const SimpleMap = () => {
 
   return (
     <div>
-      <Map
+      <Map 
         initialViewState={{
           latitude: 19.07,
           longitude: 72.87,
           zoom: 12,
         }}
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "300px", height: "300px" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
