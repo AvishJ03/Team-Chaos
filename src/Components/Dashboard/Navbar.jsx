@@ -30,54 +30,58 @@ const Navbar = () => {
               style={{ marginTop: "-20px" }}
             >
               <li>
-                <a href="#">
+                <Link to="/dashboard">
                   <span class="icon">
                     <ion-icon name="grid-outline"></ion-icon>
                   </span>
                   &nbsp;&nbsp;&nbsp;Dashboard
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="/projects">
                   <span class="icon">
                     <ion-icon name="build-outline"></ion-icon>
                   </span>
                   &nbsp;&nbsp;&nbsp;Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="/worker">
                   <span class="icon">
                     <ion-icon name="people-outline"></ion-icon>
                   </span>
                   &nbsp;&nbsp;&nbsp;Workers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="/attendance">
                   <span class="icon">
                     <ion-icon name="clipboard-outline"></ion-icon>
                   </span>
                   &nbsp;&nbsp;&nbsp;Attendance
-                </a>
-              </li>
-              
-                <Link to="/">
-                  <span class="icon">
-                    <button
-                      type="button"
-                      class="btn btn-light btn-lg px-4 mx-4"
-                      onClick={() => {
-                        logout();
-                        console.log("logout")
-                      }}
-                      style={{ borderRadius: "20px", marginTop: "295px", background: "#3A477C", color:"white"}}
-                    >
-                      Logout
-                    </button>
-                  </span>
                 </Link>
-              
+              </li>
+
+              <Link to="/">
+                <span class="icon">
+                  <button
+                    type="button"
+                    class="btn btn-light btn-lg px-4 mx-4"
+                    onClick={() => {
+                      logout();
+                      console.log("logout");
+                    }}
+                    style={{
+                      borderRadius: "20px",
+                      marginTop: "295px",
+                      background: "#3A477C",
+                      color: "white",
+                    }}
+                  >
+                    Logout
+                  </button>
+                </span>
+              </Link>
             </ul>
           </nav>
         </div>

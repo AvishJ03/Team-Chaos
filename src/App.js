@@ -3,7 +3,7 @@ import Landing from "./Components/Landing/Landing";
 import Dashboard from "../src/Components/Dashboard/Dashboard";
 import BaseWorker from "../src/Components/Workers/BaseWorker";
 import Cam from "./Components/Safety/Cam";
-import MapChart from "./Components/Projects/MapChart";
+// import MapChart from "./Components/Projects/MapChart";
 
 function App() {
   return (
