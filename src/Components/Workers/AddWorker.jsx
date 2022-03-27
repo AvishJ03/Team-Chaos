@@ -19,9 +19,9 @@ const AddWorker = () => {
                 <div className='col-6 p-2 my-3' style={{zIndex:"2"}}><input type="text" className="form-control mx-4" placeholder='Address' style={{borderRadius:"20px", width:"500px", height:"50px"}}/></div>
               </div>
               <div className='row'>
-                <div className='col-4 p-2 my2' style={{zIndex:"2"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", marginLeft:"25px", background: "#3A477C"}}>Upload Photo</button></div>
-                <div className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"-70px"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C"}}>Upload Aadhar</button></div>
-                <div className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"-100px"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C"}}>Submit</button></div>
+              <div className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"25px"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C"}}>Upload Photo</button></div>
+                <div className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"-90px"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C"}}>Upload Aadhar</button></div>
+                <div className='col-4 p-2 my-2' style={{zIndex:"2"}}><button type="button" class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#5A72D3", marginLeft:"270px", border:"none"}}>Submit</button></div>
               </div>
             </form>
         </div>
