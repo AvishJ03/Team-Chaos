@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from 'react' 
 const StatsCard2 = (props) => {
   return (
     <div>
@@ -7,12 +6,12 @@ const StatsCard2 = (props) => {
             <div className="card-body">
                 <h1 className="card-title" style={{fontSize:"30px"}}>Attendance Reports</h1>
                 <p className="card-text" style={{color:"black"}}>
-                    Attendance Reports
+                    {MyChart}
                 </p>
             </div>
         </div>
     </div>
-  )
+  );
 }
 
 export default StatsCard2
