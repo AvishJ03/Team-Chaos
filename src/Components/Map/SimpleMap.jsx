@@ -19,7 +19,7 @@ const SimpleMap = () => {
           longitude: 72.87,
           zoom: 12,
         }}
-        style={{ width: "300px", height: "300px" }}
+        style={{ width: "100vw", height: "100vh" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
