@@ -3,12 +3,13 @@ import { Marker } from "react-map-gl";
 import marker from "./markers.png";
 
 const MarkerCompo = (props) => {
+  console.log(props);
   return (
     <div>
         <Marker longitude={props.long} latitude={props.lat} anchor={"bottom"}>
           <div>
               <div className="p-5 bg-gray-900">
-              <h3>Project {props.id}</h3>
+              <h3>Project 2</h3>
               </div>
               <img src={marker} className="h-[35px] " />
           </div>
