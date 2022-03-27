@@ -42,13 +42,24 @@ const Welcome = () => {
   return (
     <>
       <div className="backgroundA mt-3">
-        <h1 className="pt-5 pb-3 px-5" style={{ color: "#fff", fontWeight:"bolder", fontSize:"53px" }}>
-          Hello, Welcome {name}!
+        <h1
+          className="pt-5 pb-3 px-5"
+          style={{ color: "#fff", fontWeight: "bolder", fontSize: "53px" }}
+        >
+          Hello, Welcome Back!
         </h1>
-        <StatsCard />
-        <StatsCard1 />
-        <StatsCard2 />
-        <StatsCard3 />
+        <h3 className="px-5" style={{ color: "#fff", fontSize: "40px" }}>
+          {name}
+        </h3>
+        <div
+          className="container"
+          style={{ marginLeft: "-30px", marginTop: "-30px" }}
+        >
+          <StatsCard />
+          <StatsCard1 />
+          <StatsCard2 />
+          <StatsCard3 />
+        </div>
       </div>
     </>
   );

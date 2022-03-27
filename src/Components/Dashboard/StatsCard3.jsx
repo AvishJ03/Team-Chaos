@@ -1,5 +1,5 @@
 import React from 'react'
-import Row from '../Workers/Row'
+import Row from '../Workers/Row1'
 
 const StatsCard3 = (props) => {
   let workers =[
