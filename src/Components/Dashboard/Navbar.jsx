@@ -38,7 +38,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/projects">
+                <Link to="/project">
                   <span class="icon">
                     <ion-icon name="build-outline"></ion-icon>
                   </span>

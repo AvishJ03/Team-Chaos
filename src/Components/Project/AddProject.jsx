@@ -3,29 +3,26 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utils/init-firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { GeoPoint } from "@firebase/firestore";
 
-const AddProject = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(null);
-  const [number, setNumber] = useState(null);
-  const [project, setProject] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
-  const navigate = useNavigate();
+const AddProject = ({setDisplay}) => {
+  const [title, setTitle] = useState("");
+  const [lat, setLatitude] = useState(null);
+  const [long, setLongitude] = useState(null);
+  const [worker, setWorker] = useState(null);
+  // const [email, setEmail] = useState("");
+  // const [address, setAddress] = useState("");
+  const geolocation = new GeoPoint(lat,long);
 
-  const addWorker = async (e) => {
+  const addProject = async (e) => {
     try {
-      const workerRef = collection(db, "workers");
-      await addDoc(workerRef, {
-        name: name,
-        age: parseInt(age),
-        mobile: parseInt(number),
-        project: project,
-        email: email,
-        address: address,
-        attendance: parseInt(0),
+      const projectRef = collection(db, "projects");
+      await addDoc(projectRef, {
+        title: title,
+        location: geolocation,
+        workers: parseInt(worker),
       });
-      navigate("/dashboard");
+      setDisplay(0);
     } catch (error) {
       console.log(error);
     }
@@ -51,9 +48,9 @@ const AddProject = () => {
                   type="text"
                   className="form-control mx-4"
                   placeholder="Project Title"
-                  value={name}
+                  value={title}
                   onChange={(e) => {
-                    setName(e.target.value);
+                    setTitle(e.target.value);
                   }}
                   style={{
                     borderRadius: "20px",
@@ -66,10 +63,10 @@ const AddProject = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Project Head"
-                  value={age}
+                  placeholder="Project Latitude"
+                  value={lat}
                   onChange={(e) => {
-                    setAge(e.target.value);
+                    setLatitude(e.target.value);
                   }}
                   style={{
                     borderRadius: "20px",
@@ -84,10 +81,10 @@ const AddProject = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Project Location"
-                  value={number}
+                  placeholder="Project Longitude"
+                  value={long}
                   onChange={(e) => {
-                    setNumber(e.target.value);
+                    setLongitude(e.target.value);
                   }}
                   style={{
                     borderRadius: "20px",
@@ -100,44 +97,10 @@ const AddProject = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Estimated Time of Completion"
-                  value={project}
+                  placeholder="No of workers"
+                  value={worker}
                   onChange={(e) => {
-                    setProject(e.target.value);
-                  }}
-                  style={{
-                    borderRadius: "20px",
-                    width: "500px",
-                    height: "50px",
-                  }}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-6 p-2 my-3" style={{ zIndex: "2" }}>
-                <input
-                  type="email"
-                  className="form-control mx-4"
-                  placeholder="No. of required workers"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                  style={{
-                    borderRadius: "20px",
-                    width: "500px",
-                    height: "50px",
-                  }}
-                />
-              </div>
-              <div className="col-6 p-2 my-3" style={{ zIndex: "2" }}>
-                <input
-                  type="text"
-                  className="form-control mx-4"
-                  placeholder="Project Description"
-                  value={address}
-                  onChange={(e) => {
-                    setAddress(e.target.value);
+                    setWorker(e.target.value);
                   }}
                   style={{
                     borderRadius: "20px",
@@ -152,6 +115,7 @@ const AddProject = () => {
                 className='col-3 p-2 my-2' style={{zIndex:"2", margin:"475px"}}
               >
                 <button
+                  onClick={addProject}
                   type="button"
                   class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C", border:"none"}}
                 >
