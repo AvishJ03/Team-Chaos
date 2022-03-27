@@ -4,7 +4,7 @@ import { db } from "../../utils/init-firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const AddWorker = () => {
+const AddProject = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState(null);
   const [number, setNumber] = useState(null);
@@ -50,7 +50,7 @@ const AddWorker = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Full Name"
+                  placeholder="Project Title"
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);
@@ -66,7 +66,7 @@ const AddWorker = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Age"
+                  placeholder="Project Head"
                   value={age}
                   onChange={(e) => {
                     setAge(e.target.value);
@@ -84,7 +84,7 @@ const AddWorker = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Mobile Number"
+                  placeholder="Project Location"
                   value={number}
                   onChange={(e) => {
                     setNumber(e.target.value);
@@ -100,7 +100,7 @@ const AddWorker = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Project Id"
+                  placeholder="Estimated Time of Completion"
                   value={project}
                   onChange={(e) => {
                     setProject(e.target.value);
@@ -118,7 +118,7 @@ const AddWorker = () => {
                 <input
                   type="email"
                   className="form-control mx-4"
-                  placeholder="Email"
+                  placeholder="No. of required workers"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -134,7 +134,7 @@ const AddWorker = () => {
                 <input
                   type="text"
                   className="form-control mx-4"
-                  placeholder="Address"
+                  placeholder="Project Description"
                   value={address}
                   onChange={(e) => {
                     setAddress(e.target.value);
@@ -148,35 +148,14 @@ const AddWorker = () => {
               </div>
             </div>
             <div className="row">
-            <div
-                className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"25px"}}
+              <div
+                className='col-3 p-2 my-2' style={{zIndex:"2", margin:"475px"}}
               >
                 <button
                   type="button"
                   class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C", border:"none"}}
                 >
-                  Upload Photo
-                </button>
-              </div>
-              <div
-                className='col-4 p-2 my-2' style={{zIndex:"2", marginLeft:"-90px"}}
-              >
-                <button
-                  type="button"
-                  class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#3A477C", border:"none"}}
-                >
-                  Upload Aadhar
-                </button>
-              </div>
-              <div
-                className='col-4 p-2 my-2' style={{zIndex:"2"}}
-              >
-                <button
-                  type="button"
-                  class="btn btn-dark btn-lg px-4" style={{borderRadius:"20px", background: "#5A72D3", marginLeft:"270px", border:"none"}}
-                  onClick={addWorker}
-                >
-                  Submit
+                  Create Project
                 </button>
               </div>
             </div>
@@ -197,4 +176,4 @@ const AddWorker = () => {
   );
 };
 
-export default AddWorker;
+export default AddProject;
