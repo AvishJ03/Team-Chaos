@@ -1,5 +1,5 @@
+import React from 'react' 
 import { func } from 'prop-types';
-import React from 'react';
 import { PieChart, Pie, Cell, Tooltip} from 'recharts';
 
 const StatsCard2 = (props) => {
@@ -30,7 +30,7 @@ const StatsCard2 = (props) => {
             </div>
         </div>
     </div>
-  )
+  );
 }
 
 export default StatsCard2

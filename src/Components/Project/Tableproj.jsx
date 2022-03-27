@@ -1,29 +1,35 @@
 import React, { useEffect, useState } from "react";
-import Row from "./Row";
+import Row from "./Rowproj";
+
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 import { db } from "../../utils/init-firebase";
 
-const Table = ({ setDisplay }) => {
-  let [workers, setWorkers] = useState([]);
+const Tableproj = () => {
+  let [projects, setProjects] = useState([]);
+  const workers = [];
 
   useEffect(() => {
     const getUser = async () => {
       try {
-        const workersRef = collection(db, "workers");
-        const docSnap = await getDocs(workersRef);
+        const projectsRef = collection(db, "projects");
+        const docSnap = await getDocs(projectsRef);
         docSnap.docs.forEach(async (element) => {
           const id = element.id;
-          const worker = doc(db, "workers", id);
-          const snap = await getDoc(worker);
-          const man = {
-            workerID: id,
-            name: snap.data().name,
-            projectID: snap.data().project,
-            attendance: snap.data().attendance,
+          const pro = doc(db, "projects", id);
+          const snap = await getDoc(pro);
+          // console.log(snap.data());
+          const long = snap.data().location._long;
+          const lat = snap.data().location._lat;
+          const p = {
+            projectID: id,
+            title: snap.data().title,
+            location: `${lat} N, ${long} E`,
+            workers: snap.data().workers,
           };
-          setWorkers((prevSelected) => [...prevSelected, man]);
+          // console.log(p);
+          setProjects((prevSelected) => [...prevSelected, p]);
         });
-        console.log(workers);
+        // console.log(projects);
       } catch (error) {
         console.log(error);
       }
@@ -31,14 +37,13 @@ const Table = ({ setDisplay }) => {
     getUser();
   }, []);
 
-  let createRow = (worker) => {
+  let createRow = (project) => {
     return (
       <Row
-        uniqueKey={worker.workerID}
-        name={worker.name}
-        projectID={worker.projectID}
-        attendance={worker.attendance}
-        setDisplay={setDisplay}
+        uniqueKey={project.projectID}
+        title={project.title}
+        location={project.location}
+        workers={project.workers}
       />
     );
   };
@@ -67,28 +72,6 @@ const Table = ({ setDisplay }) => {
                 textAlign: "center",
               }}
             >
-              Worker ID
-            </th>
-            <th
-              scope="col"
-              style={{
-                color: "#A3A2A2",
-                paddingLeft: "20px",
-                paddingRight: "20px",
-                textAlign: "center",
-              }}
-            >
-              Name
-            </th>
-            <th
-              scope="col"
-              style={{
-                color: "#A3A2A2",
-                paddingLeft: "20px",
-                paddingRight: "20px",
-                textAlign: "center",
-              }}
-            >
               Project ID
             </th>
             <th
@@ -100,7 +83,7 @@ const Table = ({ setDisplay }) => {
                 textAlign: "center",
               }}
             >
-              Attendance
+              Project Title
             </th>
             <th
               scope="col"
@@ -111,14 +94,25 @@ const Table = ({ setDisplay }) => {
                 textAlign: "center",
               }}
             >
-              Delete
+              Location
+            </th>
+            <th
+              scope="col"
+              style={{
+                color: "#A3A2A2",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+                textAlign: "center",
+              }}
+            >
+              Workers
             </th>
           </tr>
         </thead>
-        <tbody>{workers.map(createRow)}</tbody>
+        <tbody>{projects.map(createRow)}</tbody>
       </table>
     </div>
   );
 };
 
-export default Table;
+export default Tableproj;
