@@ -62,12 +62,12 @@ const Table = () => {
   <div className='px-3 container' style={{backgroundColor:"white", marginLeft:"300px", width:"1200px", marginTop:"15px", borderRadius:"20px", zIndex:"2"}}>
     <table className="table" >
       <thead>
-        <tr className = "mx-3" style={{height:"12px"}}>
-          <th className = "py-3" scope="col" style={{color:"#A3A2A2"}}>Worker ID</th>
-          <th className = "py-3" scope="col" style={{color:"#A3A2A2"}}>Name</th>
-          <th className = "py-3" scope="col" style={{color:"#A3A2A2"}}>Project ID</th>
-          <th className = "py-3" scope="col" style={{color:"#A3A2A2"}}>Attendance</th>
-          <th className = "py-3" scope="col" style={{color:"#A3A2A2"}}>Delete</th>
+        <tr style={{height:"12px"}}>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"70px"}}>Worker ID</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"23px"}}>Name</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"18px"}}>Project ID</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"50px"}}>Attendance</th>
+          <th scope="col" style={{color:"#A3A2A2", paddingLeft:"55px"}}>Delete</th>
         </tr>
       </thead>
       <tbody> 
