@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../Dashboard/Navbar';
 import TableAttendance from './TableAttendance';
-import AttendanceNavBar from './AttendanceNavBar';
 
 const BaseProject = () => {
   const[display, setDisplay] = useState(0);
@@ -30,11 +29,7 @@ const BaseProject = () => {
   return (
     <div class="row">
         <Navbar />
-        <AttendanceNavBar add={addWorker} del = {deleteWorker} update = {updateWorker} view = {viewDetails}/>
         {display===0&&<TableAttendance/>}
-        {/* {display===1&&<AddProject/>} */}
-        {/* {display===2&&<DeleteWorker/>} */}
-        {/* {display===3&&<UpdateWorker/>} */}
     </div>
   )
 }
