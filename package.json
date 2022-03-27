@@ -19,6 +19,7 @@
     "helmetdetection": "^1.2.2",
     "leaflet": "^1.7.1",
     "lodash.isempty": "^4.4.0",
+    "parse": "^3.4.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -31,8 +32,8 @@
     "react-simple-maps": "^2.3.0",
     "react-webcam": "^7.0.0",
     "react-xml-parser": "^1.1.8",
-    "styled-components": "^5.3.5",
     "recharts": "^2.1.9",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -58,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/parse": "^2.18.13"
   }
 }

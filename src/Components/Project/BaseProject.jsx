@@ -19,14 +19,9 @@ const BaseProject = () => {
   return (
     <div class="row">
       <Navbar />
-      <ProjectNavBar
-        add={addWorker}
-        // del={deleteWorker}
-        // update={updateWorker}
-        view={viewDetails}
-      />
+      <ProjectNavBar add={addWorker} view={viewDetails} />
       {display === 0 && <Tableproj />}
-      {display === 1 && <AddProject />}
+      {display === 1 && <AddProject setDisplay={setDisplay}/>}
     </div>
   );
 };
