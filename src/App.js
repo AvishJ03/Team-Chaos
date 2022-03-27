@@ -5,6 +5,7 @@ import BaseWorker from "../src/Components/Workers/BaseWorker";
 import BaseProject from "../src/Components/Project/BaseProject"
 import Cam from "./Components/Safety/Cam";
 import SimpleMap from "./Components/Map/SimpleMap";
+import BaseAttendance from "./Components/Attendance/BaseAttendance";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/safety" element={<Cam />} />
         <Route path="/gmap" element={<SimpleMap />} />
         <Route path="/project" element={<BaseProject />} />
+        <Route path="/attendance" element={<BaseAttendance />} />
       </Routes>
     </BrowserRouter>
   );
